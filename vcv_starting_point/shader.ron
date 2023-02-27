@@ -1,0 +1,101 @@
+#![enable(implicit_some)]
+(
+	meta: (
+		id: "NtyfRw",
+		name: "First_SBoi_download",
+		description: "download example",
+		tags: [
+			"sboi",
+		],
+	),
+	passes: {
+		Common: (
+			inputs: [
+				None,
+				None,
+				None,
+				None,
+			],
+		),
+		BufferA: (
+			inputs: [
+				(
+					asset: Music(XTrackTure),
+					sampler: Custom((
+						filter: nearest,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				(
+					asset: Misc(BufferA),
+					sampler: Custom((
+						filter: linear,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				None,
+				None,
+			],
+		),
+		BufferB: (
+			inputs: [
+				(
+					asset: Music(XTrackTure),
+					sampler: Custom((
+						filter: nearest,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				(
+					asset: Misc(BufferA),
+					sampler: Custom((
+						filter: linear,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				(
+					asset: Misc(BufferB),
+					sampler: Custom((
+						filter: linear,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				None,
+			],
+		),
+		Image: (
+			inputs: [
+				(
+					asset: Music(XTrackTure),
+					sampler: Custom((
+						filter: nearest,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				(
+					asset: Misc(BufferA),
+					sampler: Custom((
+						filter: linear,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				(
+					asset: Misc(BufferB),
+					sampler: Custom((
+						filter: linear,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+				None,
+			],
+		),
+	},
+)
